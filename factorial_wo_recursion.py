@@ -11,8 +11,8 @@ def factorial():
 
 f = factorial()
 
-x = islice(f,2000)
-print list(x)[1999]
+x = islice(f,1999,2000)
+print list(x)[0]
 
 
 
