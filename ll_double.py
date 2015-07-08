@@ -27,9 +27,35 @@ class LinkedList():
             print node.data
             node = node.next
 
+    def remove(self, d):
+        cn = self.head
+        while cn:
+            if cn.data == d:
+                if cn.prev is not None:
+                    cn.prev.next = cn.next
+                    cn.next.prev = cn.prev
+                else:
+                    self.head = cn
+                    cn.next.prev = None
+            cn = cn.next
+                
 
 ll = LinkedList()
 ll.add_node(1)
 ll.add_node(23)
 ll.add_node(14)
+ll.add_node(4)
+ll.add_node(90)
+ll.l_print()
+
+print 'head'
+print ll.head.data
+
+print 'tail'
+print ll.tail.data
+
+print "removing data"
+print "=============="
+
+ll.remove(23)
 ll.l_print()
