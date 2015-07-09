@@ -3,7 +3,7 @@ from itertools import groupby
 
 alist = ['abc', 'bac', 'cab', '1234', '4321', 'ab', 'xy', 'ba']
 
-tlist = [(''.join(sorted(list(x))),x)for x in alist]
+tlist = [(''.join(sorted(list(x))),x) for x in alist]
 tlist.sort(key=itemgetter(0))
 print tlist
 
