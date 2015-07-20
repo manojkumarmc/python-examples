@@ -10,10 +10,16 @@ class Tree():
         self.root = None
 
     def add_node(data):
-        pass
+        if self.root == None:
+            self.root = Node()
+            self.right == self.left == self.root
+        else:
+            pass
 
     def __iter__(self):
         return iter(self)
+
+        
 
 
 
