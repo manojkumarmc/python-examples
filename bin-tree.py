@@ -10,4 +10,21 @@ class Tree():
         self.root = None
 
     def add_node(data):
+        pass
+
+    def __iter__(self):
+        return iter(self)
+
+
+
+        
+        
+
+
+        
+        
+
+    
+
+
         
