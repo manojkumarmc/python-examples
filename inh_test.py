@@ -1,4 +1,7 @@
 class Base(object):
+    def __init__(self):
+        print "init from base"
+        
     def add(self):
         print 'base add'
 
@@ -7,6 +10,10 @@ class Base(object):
 
 
 class Op(Base):
+    def __init__(self):
+        super(Op, self).__init__()
+        print "init from child"
+        
     def add(self):
         super(Op, self).add()
         print 'Op add'
