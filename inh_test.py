@@ -8,6 +8,8 @@ class Base(object):
     def minus(self):
         print 'base minus'
 
+    def child_handler(self):
+
 
 class Op(Base):
     def __init__(self):
