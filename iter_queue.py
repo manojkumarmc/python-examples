@@ -19,5 +19,4 @@ q.put(3)
 for n in IterableQueue(q):
     print n
 
-while not q.empty():
-    print q.get()
+
