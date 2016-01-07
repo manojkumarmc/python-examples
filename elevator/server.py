@@ -81,4 +81,51 @@ while True:
 
 q.join()
 
+'''
+The program can be run using : 
+==============================
+
+user@hostname: $ python server.py
+
+Sample output:
+=============
+Please enter your level: 5
+
+Please enter your level: 
+Elev-1 | Destination : 5
+
+Elev-1 | At level: 1
+5
+
+Please enter your level: 
+Elev-2 | Destination : 5
+
+Elev-1 | At level: 2
+
+Elev-2 | At level: 1
+
+Elev-1 | At level: 3
+
+Elev-2 | At level: 2
+
+Elev-1 | At level: 4
+
+Elev-2 | At level: 3
+
+Elev-1 | At level: 5
+
+Elev-1 | Opening door at :5
+
+Elev-2 | At level: 4
+
+Elev-1 | Closing door at :5
+
+Elev-2 | At level: 5
+
+Elev-2 | Opening door at :5
+
+Elev-2 | Closing door at :5
+
+'''
+
 
