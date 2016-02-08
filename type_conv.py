@@ -9,6 +9,12 @@ def decimal_to_binary(source):
   pout = ''.join([str(i) for i in output[::-1]])
   return pout
 
+def binary_to_decimal(source)
+  source = str(source)
+  lsrc = len(source)
+  
+  
+
 try:
   parser = optparse.OptionParser()
 #  import pdb; pdb.set_trace()
