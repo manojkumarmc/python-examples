@@ -1,0 +1,3 @@
+yum install zlib zlib-devel openssl openssl-devel 
+./configure --with-zlib --prefix=/usr/local
+make && make altinstall
