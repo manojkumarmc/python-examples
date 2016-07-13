@@ -29,5 +29,5 @@ class Child(MyBase):
         return 1
 
 cl = Child()
-print cl.get_found_properties(['p1','second','foo'])
+print (cl.get_found_properties(['p1','second','foo']))
 
