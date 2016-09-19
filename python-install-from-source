@@ -2,6 +2,6 @@ yum install zlib zlib-devel openssl openssl-devel
 ./configure \
 --with-zlib \
 --prefix=/usr/local \
---enable-shared" \
+--enable-shared \
 LD_LIBRARY_PATH=/usr/local/lib64/python35/config
 make && make altinstall
