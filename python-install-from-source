@@ -3,5 +3,6 @@ yum install zlib zlib-devel openssl openssl-devel
 --with-zlib \
 --prefix=/usr/local \
 --enable-shared \
+--enable-unicode=ucs4 \
 LD_LIBRARY_PATH=/usr/local/lib64/python35/config
-make && make altinstall
+make && make altinstall && make commoninstall
