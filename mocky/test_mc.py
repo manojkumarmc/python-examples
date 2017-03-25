@@ -18,10 +18,14 @@ class MyTestCase(unittest.TestCase):
     def test_num_mgr(self,  mock_multi, mock_add):
         mock_add.return_value = 20
         mock_multi.return_value = 100
-        self.assertEquals(num_mgr(1,1),
+
+        self.assertEquals(num_mgr(10,10),
                           {'sum':20,
                            'product': 100}
                           )
+
+        mock_add.assert_called_once_with(10,10)
+        mock_multi.assert_called_once_with(10,10)
 
 
 
