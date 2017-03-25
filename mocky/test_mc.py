@@ -2,7 +2,7 @@
 from mock import Mock, patch
 import unittest
 
-from m_calls import add, num_mgr
+from m_calls import add, num_mgr, Employee
 
 class MyTestCase(unittest.TestCase):
 
@@ -26,6 +26,11 @@ class MyTestCase(unittest.TestCase):
 
         mock_add.assert_called_once_with(10,10)
         mock_multi.assert_called_once_with(10,10)
+
+    @patch.object(Employee, 'get_name', return_value = 'MC Bobs')
+    def test_emp_class(self, mock_get_name):
+        emp = Employee('MC', 20, 'M')
+        self.assertEquals(emp.get_name(), 'MC Bobs')
 
 
 
