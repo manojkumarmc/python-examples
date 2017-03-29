@@ -1,8 +1,7 @@
-
 from mock import Mock, patch
 import unittest
 
-from m_calls import add, num_mgr, Employee
+from m_calls import add, num_mgr, Employee, get_call
 
 class MyTestCase(unittest.TestCase):
 
@@ -31,6 +30,19 @@ class MyTestCase(unittest.TestCase):
     def test_emp_class(self, mock_get_name):
         emp = Employee('MC', 20, 'M')
         self.assertEquals(emp.get_name(), 'MC Bobs')
+
+    def test_get_call(self):
+        my_requests_module = Mock()
+        my_requests_module.get.return_value = 404
+        with patch.dict('sys.modules', my_requests_module=my_requests_module):
+            import my_requests_module
+            self.assertEquals(
+                get_call('http://www.manojkumarmc.com'),
+                404
+            )
+
+
+
 
 
 

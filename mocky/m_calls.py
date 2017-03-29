@@ -1,3 +1,5 @@
+import requests
+
 def m_printer(a, b):
     return '%s plus %s' % (a,b)
 
@@ -19,8 +21,8 @@ class Employee():
 
     def __init__(self, name, age, sex):
         self._name = name
-        self._age  = age
-        self.sex   = sex
+        self._age = age
+        self.sex = sex
 
     def get_name(self):
         return self._name
@@ -30,3 +32,8 @@ class Employee():
 
     def get_sex(self):
         return self._sex
+
+
+def get_call(url=''):
+    ro = requests.get(url)
+    return ro
