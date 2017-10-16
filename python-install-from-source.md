@@ -36,7 +36,7 @@ $ ./configure \
 --prefix=/usr/local \
 --enable-shared \
 --enable-unicode=ucs4 \
-LD_LIBRARY_PATH=/usr/local/lib64/python2714/config
+LDFLAGS="-Wl,--rpath=/usr/local/lib"
 
 $ make && make altinstall
 
