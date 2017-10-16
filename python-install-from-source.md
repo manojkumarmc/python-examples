@@ -22,31 +22,35 @@ make && make altinstall && make commoninstall
 
 ln -sf /usr/local/lib/libpython3.6m.so /usr/lib64/libpython3.6m.so.1.0
 
+Install Python 2.7
+-------------------
 
-Install Python 2.7 from source
-------------------------------
-$ wget https://www.python.org/ftp/python/2.7.14/Python-2.7.14.tgz
+wget https://www.python.org/ftp/python/2.7.14/Python-2.7.14.tgz
 
-$ tar -xzvf Python-2.7.14.tgz
+tar -xzvf Python-2.7.14.tgz
 
-$ cd Python-2.7.14
+cd Python-2.7.14
 
-$ ./configure \
---with-zlib \
---prefix=/usr/local \
---enable-shared \
---enable-unicode=ucs4 \
+./configure
+--with-zlib
+--prefix=/usr/local
+--enable-shared
+--enable-unicode=ucs4
 LDFLAGS="-Wl,--rpath=/usr/local/lib"
 
-$ make && make altinstall
+make && make altinstall
 
-$ find ./ -name libpython2.7.so.1.0
+if there is a shared lib error
+------------------------------
 
-$ echo /opt/Python-2.7.14/ >> /etc/ld.so.conf
+find ./ -name libpython2.7.so.1.0
 
-$ ldconfig
+echo /opt/Python-2.7.14/ >> /etc/ld.so.conf
 
-$ python2.7
+ldconfig
+
+python2.7
+
 
 
 
