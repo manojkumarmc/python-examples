@@ -1,7 +1,9 @@
 
 Install dependencies
 ---------------------
-yum install -y wget gcc gcc++ zlib zlib-devel openssl openssl-devel 
+yum install -y epel-release gcc gcc-c++ wget zlib zlib-devel openssl openssl-devel \
+    pycurl pycurl-devel libffi libffi-devel glibc-devel make git pam-devel \
+    libxml2 libxml2-devel libxslt libxslt-devel gpgme gpgme-devel pygpgme freetds-devel
 
 Install Python 3.6 from source 
 ------------------------------
