@@ -4,7 +4,7 @@ import string
 
 from hypothesis import given
 from hypothesis import strategies as st
-sys.path.append('~/projects/python/python-examples')
+sys.path.append('/Users/mcbobs/projects/python/python-examples/')
 
 from airport_list import list_airports
 from am_pm_to_24hr import time_converter
