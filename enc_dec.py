@@ -17,7 +17,8 @@ def decr(in_str):
 
 
 def main():
-    ew = encr('hello there')
+    #ew = encr('hello there')
+    ew = encr('hello')
     print (ew)
     dw = decr(ew)
     print(dw)

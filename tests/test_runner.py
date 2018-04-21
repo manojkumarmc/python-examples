@@ -1,16 +1,20 @@
 import unittest
 import sys
+import string
+
 from hypothesis import given
 from hypothesis import strategies as st
-sys.path.append('/Users/mcbobs/projects/python/python-examples')
+sys.path.append('~/projects/python/python-examples')
 
 from airport_list import list_airports
 from am_pm_to_24hr import time_converter
 
 class TestRunner(unittest.TestCase):
 
-    @given(s1 = st.sampled_from(['ABC','DEF','GHI']),
-           s2 = st.sampled_from(['XYZ','HOO']))
+    # @given(s1 = st.sampled_from(['ABC','DEF','GHI']),
+    #        s2 = st.sampled_from(['XYZ','HOO']))
+    @given(st.text(min_size=3, max_size=3, alphabet=string.ascii_uppercase),
+           st.text(min_size=3, max_size=3, alphabet=string.ascii_uppercase))
     def test_airport_lister(self, s1, s2):
         ap = 'This flight goes from {} to {}'.format(s1, s2)
         self.assertEquals(len(list_airports(ap)), 2)
