@@ -8,6 +8,7 @@ sys.path.append('/Users/mcbobs/projects/python/python-examples/')
 
 from airport_list import list_airports
 from am_pm_to_24hr import time_converter
+from enc_dec1 import encr, decr
 
 class TestRunner(unittest.TestCase):
 
@@ -24,6 +25,10 @@ class TestRunner(unittest.TestCase):
     def test_time_converter(self, p1, p2):
         time_str = str(p1) + p2
         self.assertLessEqual(int(time_converter(time_str)), 24)
+
+    @given(st.text(alphabet=string.ascii_letters))
+    def test_enc_dec(self, s):
+        self.assertEquals(decr(encr(s)), s)
 
 
 

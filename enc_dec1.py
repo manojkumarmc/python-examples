@@ -25,7 +25,7 @@ def main():
     print (ew)
     dw = decr(ew)
     print(dw)
-
-
-if __name__ == "__main__":
-    main()
+#
+#
+# if __name__ == "__main__":
+#     main()

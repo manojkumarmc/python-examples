@@ -15,4 +15,4 @@ def changer(amt):
         print p
 
 
-changer(78)        
+changer(78)
