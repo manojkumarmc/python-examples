@@ -45,5 +45,7 @@ bst.add(8)
 bst.add(3)
 bst.add(100)
 bst.add(-2)
+bst.add(-200)
 bst.min_val()
+
 
