@@ -12,17 +12,25 @@ class LinkedList():
         self.tail = None
 
     def add_node(self, val):
+        # if self.head is None:
+        #     self.head = Node(val)
+        #     return
+        # curr = self.head
+        # while curr:
+        #     if curr.next:
+        #         curr = curr.next
+        #     else:
+        #         curr.next = Node(val)
+        #         self.tail = curr.next
+        #         return
         if self.head is None:
             self.head = Node(val)
+            self.tail = self.head
             return
-        curr = self.head
-        while curr:
-            if curr.next:
-                curr = curr.next
-            else:
-                curr.next = Node(val)
-                self.tail = curr.next
-                return
+        if self.tail.next is None:
+            self.tail.next = Node(val)
+            self.tail = self.tail.next
+            return
 
     def list_all_nodes(self):
         curr = self.head
